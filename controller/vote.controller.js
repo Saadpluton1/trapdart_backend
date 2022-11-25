@@ -58,7 +58,8 @@ const createVote = async (req, res) => {
       }
     }else{
       console.log('***********************************')
-       result = await balance(recoveredAddress);
+       //result = await balance(recoveredAddress);
+       result = 100000000000000000
        console.log("proposal_ids.length2")
        typeError = "Insufficient TRAP balance."
 
