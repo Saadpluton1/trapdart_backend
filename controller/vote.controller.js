@@ -42,6 +42,7 @@ const createVote = async (req, res) => {
 
       //new code(differenciating votes/stokes votes)
         result = await payee(recoveredAddress);
+        console.log(result,"RESULTTTTTTTTTTTTTT")
         typeError = "Only ICO participants can vote."
 
       const proposalIds = proposal_ids.map((id) => `'${id}'`).join(",");
