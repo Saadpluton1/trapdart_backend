@@ -41,6 +41,7 @@ const createVote = async (req, res) => {
           : [];
 
       //new code(differenciating votes/stokes votes)
+      console.log("Before")
         result = await payee(recoveredAddress);
         console.log(result,"RESULTTTTTTTTTTTTTT")
         typeError = "Only ICO participants can vote."
@@ -59,7 +60,7 @@ const createVote = async (req, res) => {
     }else{
       console.log('***********************************')
        //result = await balance(recoveredAddress);
-       result = 10000
+       result = 1000
        console.log("proposal_ids.length2")
        typeError = "Insufficient TRAP balance."
 
