@@ -8,7 +8,7 @@ const pool = require("../db/pool");
 
 const createVote = async (req, res) => {
   try {
-    console.log(req.body);
+    console.log("REQueset body",req.body);
     const {
       proposals_id,
       voter_address,
