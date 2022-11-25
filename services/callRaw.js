@@ -22,12 +22,20 @@ async function balance(userAddress) {
     let contractaddress = trapDart_addr;
 
     console.log("COntractADdres from call row",contractaddress)
+    console.log("test",provider)
+
     // contractaddress = ethers.utils.getAddress(contractaddress);
     // console.log(contractaddress)
 try {
+
     let contract = new ethers.Contract(contractaddress, abi, provider);
     let tx = await contract.balanceOf(userAddress)
+    console.log("test",provider)
+    console.log("test")
     console.log("Tracsaction to string",tx.toString())
+    console.log("test",provider)
+    console.log("test")
+
     return await tx.toString()
 }catch(err) {
     console.log("ERROR Of balance of",err)
@@ -36,7 +44,6 @@ try {
 }
 
 async function payee(userAddress) {
-
 
     let abi = CrowdSale;
     userAddress = ethers.utils.getAddress(userAddress)
