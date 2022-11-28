@@ -16,8 +16,8 @@ async function balance(userAddress) {
     userAddress = ethers.utils.getAddress(userAddress)
 
 
-    const provider =new ethers.providers.JsonRpcProvider(node);
-
+     const provider =new ethers.providers.JsonRpcProvider(node);
+    //const provider = new ethers.providers.Web3Provider(node);
 
     let contractaddress = trapDart_addr;
 
@@ -34,7 +34,7 @@ try {
     console.log("test")
     console.log("Tracsaction to string",tx.toString())
     console.log("test",provider)
-    console.log("test")
+    console.log("Balance of user",tx.toString())
 
     return await tx.toString()
 }catch(err) {
@@ -68,6 +68,6 @@ async function payee(userAddress) {
     console.log(tx)
     return await result.toString()
 }
-
+balance("0xbb45AF76f5198db4e38bA3668993c82739343c40")
 module.exports={payee , balance}
 
