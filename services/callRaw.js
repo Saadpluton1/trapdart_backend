@@ -4,9 +4,9 @@ const TrapDart  = require("../package/TrapDart.json")
 const CrowdSale  = require("../package/Crowdsale.json")
 
 
-//const node = "https://eth-goerli.alchemyapi.io/v2/GKcZh-E7o6PB3gEz0M9fUHPwG4_xHbbj";
+const node = "https://eth-goerli.alchemyapi.io/v2/GKcZh-E7o6PB3gEz0M9fUHPwG4_xHbbj";
     // const privateKey = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-  const node = "http://127.0.0.1:8545/";
+ // const node = "http://127.0.0.1:8545/";
 // console.log(trapDart_addr,"YY");
 // console.log(crowdsale_addr ,"SS");
 async function balance(userAddress) {
@@ -16,7 +16,7 @@ async function balance(userAddress) {
     userAddress = ethers.utils.getAddress(userAddress)
 
 
-     const provider =new ethers.providers.WebSocketProvider(node);
+    const provider =new ethers.providers.JsonRpcProvider(node);
     //const provider = new ethers.providers.Web3Provider(node);
 
     let contractaddress = trapDart_addr;
@@ -51,8 +51,8 @@ async function payee(userAddress) {
     // let wallet  = ethers.Wallet(privateKey)
     // const provider =new ethers.providers.JsonRpcSigner(node,wallet);
 
-    // const provider =new ethers.providers.JsonRpcProvider(node);
-    const provider =new ethers.providers.WebSocketProvider(node);
+     const provider =new ethers.providers.JsonRpcProvider(node);
+   // const provider =new ethers.providers.WebSocketProvider(node);
 
     let contractaddress = crowdsale_addr;
 
