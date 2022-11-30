@@ -13,7 +13,7 @@ const createProposal = async (req, res) => {
 
         const message = "Add the proposal"
         const owner_address = process.env.owner_address
-
+console.log("Owner_ADDRESS",owner_address)
         const recoveredAddress = ethers.utils.verifyMessage(message, signature)
         console.log("RECOVERED_ADDRESS", recoveredAddress)
 
