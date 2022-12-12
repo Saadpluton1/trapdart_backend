@@ -13,9 +13,9 @@ module.exports = {
         charset: 'utf8',
         debug: false,
         timezone: "UTC",
-        ssl: {
-            rejectUnauthorized: false
-          }
+        // ssl: {
+        //     rejectUnauthorized: false
+        //   }
     },
     migrations: {
         directory: MIGRATION_DIR

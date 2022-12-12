@@ -11,9 +11,9 @@ const pool = new Pool({
   database: DB_NAME,
   listen_addresses : '*',
   timezone: "UTC",
-  ssl: {
-    rejectUnauthorized: false
-  }
+  // ssl: {
+  //   rejectUnauthorized: false
+  // }
 });
 
 module.exports = pool;
